@@ -20,7 +20,7 @@ const Star = ({ message, onClick }) => {
                 ...position, 
                 width: `${size}px`, 
                 height: `${size}px`,
-                backgroundImage: `url('/assets/Stars.png')`, // Ensure the correct path
+                backgroundImage: `url('/assets/Starsf.png')`, // Ensure the correct path
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 cursor: 'pointer'

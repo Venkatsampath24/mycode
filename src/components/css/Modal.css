@@ -1,24 +1,59 @@
-.modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.modal-overlay {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 2px solid #ff69b4;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Adds a blur effect for depth */
 }
 
-.close {
-    align-self: flex-end;
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px; /* More rounded corners for a cute effect */
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    animation: slide-in 0.5s; /* Slide-in animation */
+}
+
+.modal-content h2 {
+    color: #ff69b4; /* Cute pink color for the header */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+}
+
+.modal-content p {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 15px 0;
+}
+
+.modal-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    background: #ff69b4; /* Button color */
+    color: white;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 24px;
+    transition: background 0.3s ease; /* Smooth transition for hover */
 }
 
-.modal p {
-    margin: 0;
+.modal-content button:hover {
+    background: #ff1493; /* Darker pink on hover */
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

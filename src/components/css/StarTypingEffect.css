@@ -1,0 +1,35 @@
+.star-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevents overflow of stars */
+    background: linear-gradient(black, darkblue); /* Background to simulate night sky */
+}
+
+.star {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+}
+
+.star:hover {
+    transform: scale(1.1); /* Slightly enlarge the star on hover */
+}
+
+.click-me-text {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 12px; /* Font size for the text */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the text inside the star */
+    opacity: 0; /* Hide text initially */
+    transition: opacity 0.3s; /* Fade in effect */
+}
+
+.star:hover .click-me-text {
+    opacity: 1; /* Show text on hover */
+}

@@ -6,7 +6,7 @@ import './App.css';
 const App = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
-    const [audio] = useState(new Audio('/assets/Star.mp3')); // Create an audio instance
+    const [audio] = useState(new Audio('/assets/songl.mp3')); // Create an audio instance
 
     const playAudio = () => {
         audio.loop = true; // Set to loop

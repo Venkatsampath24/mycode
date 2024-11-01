@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden; /* Prevents overflow of stars */
-    background: linear-gradient(black, darkblue); /* Background to simulate night sky */
+    background: linear-gradient(black, rgb(16, 213, 92)); /* Background to simulate night sky */
 }
 
 .star {
